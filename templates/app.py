@@ -14,5 +14,13 @@ def home(user_name, age):
     }
     return render_template('home.html', login_user = login_user)
 
+@app.route('/userlist')
+def user_list():
+    users = [
+    'Taro', 'Jiro', 'Tom', 'Naoki'
+    ]
+    is_login = True
+    return render_template('userlist.html', users = users, is_login = is_login)
+
 if __name__ == "__main__":
     app.run()

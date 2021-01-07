@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask_lesson</title>
+  </head>
+  <body>
+    <ul>
+    {% for user in users %}
+      <li>{{user}}</li>
+    {% endfor %}
+    </ul>
+    {% if is_login %}
+    <p>ログイン済みです</p>
+    {% else %}
+    <p>ログインしていません</p>
+    {% endif %}
+    {% if 'Taro' in users%}
+    <p>Taroは存在します</p>
+    {% endif %}
+  </body>
+</html>
