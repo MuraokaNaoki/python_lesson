@@ -23,4 +23,4 @@ def user_list():
     return render_template('userlist.html', users = users, is_login = is_login)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
