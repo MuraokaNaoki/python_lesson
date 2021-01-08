@@ -1,5 +1,5 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<h1>{{login_user.name}}({{login_user.age}})さんがログインしました</h1>
+<h1>{{ "%s(%s)"|format(login_user.name, login_user.age) }}さんがログインしました</h1>
 {% endblock%}

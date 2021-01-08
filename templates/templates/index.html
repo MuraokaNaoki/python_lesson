@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Flask_lesson</title>
-  </head>
-  <body>
-    <h1>hello world</h1>
-  </body>
-</html>
-
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
 <h1>hello world</h1>
+<h1>{{"hello world" | title}}</h1>
+<h1>{{"hello world" | upper}}</h1>
+<p>{{user|default("その変数は存在しません")}}</p>
+<p>{{"jinjaについてもっと知りたい人は
+  https://jinja.palletsprojects.com/en/2.11.x/
+  まで"|urlize(target="_blank")}}</p>
 {% endblock%}
