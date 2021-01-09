@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Userlist{{super()}}{% endblock %}
 {% block content %}
+<a href="{{ url_for('index') }}">IndexPage</a>
 <ul>
  {# <h1>最初の人は{{ users|first }}</h1>
   <h1>最後の人は{{ users|last}}</h1>
