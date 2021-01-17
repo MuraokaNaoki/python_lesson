@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<p>
+    {% if name and age %}
+    名前:{{ name }}<br>
+    年齢:{{ age }}
+    {% else %}
+    名前と年齢を入力してください
+    {% endif %}
+</p>
+<form method = "POST">
+    {{ form.csrf_token }}<!--攻撃される対策の乱数-->
+    {{ form.name.label }}{{ form.name() }}<!--UserFormクラスのラベル（ここでは名前）form.name→StringFieldを実行（ここでは名前を入力するためのテキストBOXが出てくる）-->
+    {{ form.age.label }}{{ form.age() }}
+    {{ form.submit.label}}{{ form.submit() }}
+</form>
+{% endblock %}
